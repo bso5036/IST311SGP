@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author bso5036
  */
 public class UserList {
-    ArrayList<User> userList;
+    private ArrayList<User> userList;
     public UserList(){
         userList = new ArrayList<>();
         addUsersToList();
@@ -26,4 +26,9 @@ public class UserList {
         userList.add(new User("babygirl", "babygirl"));
         userList.add(new User("iloveyou", "iloveyou"));
     }
+    
+    public ArrayList<User> getUserList(){
+        return userList;
+    }
+    
 }

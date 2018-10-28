@@ -22,4 +22,12 @@ public class User {
     public String toString(){
         return "Username: " + username + " Password: " + password;
     }
+    
+    public String getUsername(){
+        return username;
+    }
+    
+    public String getPassword(){
+        return password;
+    }
 }

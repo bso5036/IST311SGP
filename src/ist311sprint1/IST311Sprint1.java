@@ -25,7 +25,6 @@ public class IST311Sprint1 extends Application {
         
         stage.setScene(scene);
         stage.show();
-        UserList userList = new UserList();
     }
 
     /**
