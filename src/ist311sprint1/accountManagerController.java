@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package m08.a01;
+package ist311sprint1;
 
 import java.net.URL;
 import java.util.ResourceBundle;
