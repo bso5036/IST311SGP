@@ -18,7 +18,7 @@ import javafx.scene.text.Text;
  *
  * @author bso5036
  */
-public class FXMLDocumentController implements Initializable {
+public class FXMLLoginController implements Initializable {
     private UserList userList;
     @FXML private Text actiontarget;
     @FXML private TextField usernameTextField;
