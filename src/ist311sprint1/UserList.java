@@ -16,7 +16,6 @@ public class UserList {
     public UserList(){
         userList = new ArrayList<>();
         addUsersToList();
-        System.out.println(userList.get(0).toString());
     }
     
     private void addUsersToList(){
@@ -24,7 +23,7 @@ public class UserList {
         userList.add(new User("password", "password"));
         userList.add(new User("rockyou", "rockyou"));
         userList.add(new User("babygirl", "babygirl"));
-        userList.add(new User("iloveyou", "iloveyou"));
+        userList.add(new User("qwer", "qwer"));
     }
     
     public ArrayList<User> getUserList(){
