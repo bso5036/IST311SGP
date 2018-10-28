@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="286.0" prefWidth="563.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="m08.a01.FXMLDocumentController">
+   <children>
+      <Button fx:id="manageAccountButton" layoutX="22.0" layoutY="152.0" mnemonicParsing="false" onAction="#handleManageAccountButtonAction" text="Manage Account" />
+      <Button fx:id="logOutButton" layoutX="51.0" layoutY="39.0" mnemonicParsing="false" onAction="#handleLogOutButtonAction" text="Log Out" />
+      <Button fx:id="viewGradesButton" layoutX="37.0" layoutY="209.0" mnemonicParsing="false" onAction="#handleViewGradesButtonAction" text="View Grades" />
+      <Button fx:id="viewScheduleButton" layoutX="30.0" layoutY="95.0" mnemonicParsing="false" onAction="#handleViewScheduleButtonAction" text="View Schedule" />
+      <Text fx:id="outputText" layoutX="310.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="184.6708984375" />
+   </children>
+</AnchorPane>
