@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="286.0" prefWidth="563.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="m08.a01.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="286.0" prefWidth="563.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ist311sprint1.accountManagerController">
    <children>
       <Button fx:id="manageAccountButton" layoutX="22.0" layoutY="152.0" mnemonicParsing="false" onAction="#handleManageAccountButtonAction" text="Manage Account" />
       <Button fx:id="logOutButton" layoutX="51.0" layoutY="39.0" mnemonicParsing="false" onAction="#handleLogOutButtonAction" text="Log Out" />
