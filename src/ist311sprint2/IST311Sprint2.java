@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ist311sprint1;
+package ist311sprint2;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -15,7 +15,7 @@ import javafx.stage.Stage;
  *
  * @author bso5036
  */
-public class IST311Sprint1 extends Application {
+public class IST311Sprint2 extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
