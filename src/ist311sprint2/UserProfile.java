@@ -1,5 +1,7 @@
 package ist311sprint2;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author rks5335
@@ -10,6 +12,7 @@ public class UserProfile {
     private String lastName = new String();
     private String email = new String();
     private String accessID = new String();
+    private ArrayList<Course> courses;
     
 
     public UserProfile(String newFirstName, String newLastName, String newEmail, String newAccessID) {
@@ -45,5 +48,16 @@ public class UserProfile {
      */
     public String getAccessID() {
         return accessID;
+    }
+    
+    public ArrayList<Course> getCourses(){
+        if(courses.isEmpty()){
+            CanvasWrapper.getCanvasWrapper().captureGrades(this);
+        }
+        return courses;
+    }
+    
+    public void setCourses(ArrayList<Course> newCourses){
+        courses = newCourses;
     }
 }

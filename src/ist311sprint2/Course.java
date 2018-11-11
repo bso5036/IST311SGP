@@ -10,5 +10,24 @@ package ist311sprint2;
  * @author bso5036
  */
 public class Course {
+    private String name;
+    private String instructor;
+    private Double grade;
+    public Course(String inName, String inInstructor, Double inGrade){
+        name = inName;
+        instructor = inInstructor;
+        grade = inGrade;
+    }
     
+    public Double getGrade(){
+        return grade;
+    }
+    
+    public String getName(){
+        return name;
+    }
+    
+    public String getInstructor(){
+        return instructor;
+    }
 }
