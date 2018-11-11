@@ -17,16 +17,6 @@ public class UserProfile {
     private String email = new String();
     private String accessID = new String();
     private ArrayList<Course> courses;
-    @FXML
-    private TextField firstNameTextField;
-    @FXML
-    private TextField lastNameTextField;
-    @FXML
-    private TextField emailTextField;
-    @FXML
-    private TextField accessIDTextField;
-    @FXML
-    private Button submitButton;
     
 
     public UserProfile(String newFirstName, String newLastName, String newEmail, String newAccessID) {
@@ -103,14 +93,5 @@ public class UserProfile {
         this.accessID = accessID;
     }
     
-    @FXML
-    private void handleSubmitButton(ActionEvent event) {
-        
-        setFirstName(firstNameTextField.getText());
-        setLastName(lastNameTextField.getText());
-        setEmail(emailTextField.getText());
-        setAccessID(accessIDTextField.getText());
-        
-    }
     
 }
