@@ -28,7 +28,8 @@
     <Label text="PSU ID:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
     <TextField fx:id="accessIDTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
 
-    <Button fx:id="submitButton" GridPane.columnIndex="2" GridPane.rowIndex="5" mnemonicParsing="false" onAction="#handleSubmitButton" text="Manage Account"  />
+    <Button fx:id="submitButton" GridPane.columnIndex="2" GridPane.rowIndex="5" mnemonicParsing="false" onAction="#handleSubmitButton" text="Submit"  />
+    <Button fx:id="backButton" GridPane.columnIndex="0" GridPane.rowIndex="5" mnemonicParsing="false" onAction="#handleBackButton" text="Back"  />
     
    <columnConstraints>
       <ColumnConstraints />

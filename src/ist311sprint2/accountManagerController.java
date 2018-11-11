@@ -5,10 +5,12 @@
  */
 package ist311sprint2;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.text.Text;
 
@@ -38,8 +40,11 @@ public class accountManagerController implements Initializable {
     public void handleViewScheduleButtonAction(ActionEvent event){
         outputText.setText("View Schedule button pressed");
     }
-    public void handleManageAccountButtonAction(ActionEvent event){
+    public void handleManageAccountButtonAction(ActionEvent event) throws IOException{
         outputText.setText("Manage Account button pressed");
+        
+        outputText.getScene().setRoot(FXMLLoader.load(getClass().getResource("UserProfile.fxml")));
+        
     }
     public void handleViewGradesButtonAction(ActionEvent event){
         outputText.setText("View Grades button pressed");
