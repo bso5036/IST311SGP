@@ -35,10 +35,10 @@ public class UserProfileController implements Initializable {
     private Button backButton;
     
     @FXML
-    private void handleSubmitButton(ActionEvent event) {
+    private void handleSubmitButton(ActionEvent event) throws IOException {
         
         UserProfile profile = new UserProfile(firstNameTextField.getText(), lastNameTextField.getText(), emailTextField.getText(), accessIDTextField.getText());
-        
+        submitButton.getScene().setRoot(FXMLLoader.load(getClass().getResource("accountManager.fxml")));
     }
     
     @FXML
