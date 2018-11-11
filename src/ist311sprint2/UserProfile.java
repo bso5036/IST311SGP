@@ -1,6 +1,10 @@
 package ist311sprint2;
 
 import java.util.ArrayList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
 /**
  *
@@ -13,6 +17,16 @@ public class UserProfile {
     private String email = new String();
     private String accessID = new String();
     private ArrayList<Course> courses;
+    @FXML
+    private TextField firstNameTextField;
+    @FXML
+    private TextField lastNameTextField;
+    @FXML
+    private TextField emailTextField;
+    @FXML
+    private TextField accessIDTextField;
+    @FXML
+    private Button submitButton;
     
 
     public UserProfile(String newFirstName, String newLastName, String newEmail, String newAccessID) {
@@ -60,4 +74,43 @@ public class UserProfile {
     public void setCourses(ArrayList<Course> newCourses){
         courses = newCourses;
     }
+
+    /**
+     * @param firstName the firstName to set
+     */
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    /**
+     * @param lastName the lastName to set
+     */
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    /**
+     * @param email the email to set
+     */
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    /**
+     * @param accessID the accessID to set
+     */
+    public void setAccessID(String accessID) {
+        this.accessID = accessID;
+    }
+    
+    @FXML
+    private void handleSubmitButton(ActionEvent event) {
+        
+        setFirstName(firstNameTextField.getText());
+        setLastName(lastNameTextField.getText());
+        setEmail(emailTextField.getText());
+        setAccessID(accessIDTextField.getText());
+        
+    }
+    
 }
