@@ -30,13 +30,13 @@ public class CaptureGradesController implements Initializable {
     @FXML
     private Button backButton;
     @FXML
-    private final TableView courseTable = new TableView<Course>();
+    private TableView courseTable = new TableView<Course>();
     @FXML
-    private final TableColumn<Course, String> courseColumn = new TableColumn("First Name");
+    private TableColumn<Course, String> courseColumn = new TableColumn("First Name");
     @FXML
-    private final TableColumn<Course, String> instructorColumn = new TableColumn("Last Name");
+    private TableColumn<Course, String> instructorColumn = new TableColumn("Last Name");
     @FXML
-    private final TableColumn<Course, String> gradeColumn = new TableColumn("Username");
+    private TableColumn<Course, String> gradeColumn = new TableColumn("Username");
     @FXML
     private Label errorLabel;
 
