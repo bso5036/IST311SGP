@@ -29,7 +29,7 @@ public class CanvasWrapper {
     private ArrayList<Course> courseList;
     private ArrayList<Course> hardcodedList;
     private final String fileName;
-    private Gson gson;
+    private final Gson gson;
     private final Type type;
 
     private CanvasWrapper() {
@@ -39,19 +39,19 @@ public class CanvasWrapper {
         fileName = "CanvasGrades.txt";
         hardcodedList();
     }
-    
-    private void hardcodedList(){
+
+    private void hardcodedList() {
         hardcodedList = new ArrayList();
         hardcodedList.add(new Course("IST 311", "Steven Haynes", 95.34));
         hardcodedList.add(new Course("IST 242", "Fred Fonseca", 86.63));
         hardcodedList.add(new Course("IST 420", "David Fusco", 87.36));
-        hardcodedList.add(new Course("CMPSC 122","Roger Christman", 69.51));
-        hardcodedList.add(new Course("IST 440W","Michael Hills", 92.23));
+        hardcodedList.add(new Course("CMPSC 122", "Roger Christman", 69.51));
+        hardcodedList.add(new Course("IST 440W", "Michael Hills", 92.23));
         System.out.println(hardcodedList);
     }
-    
-    public static CanvasWrapper getCanvasWrapper(){
-        if(theCanvasWrapper == null){
+
+    public static CanvasWrapper getCanvasWrapper() {
+        if (theCanvasWrapper == null) {
             theCanvasWrapper = new CanvasWrapper();
         }
         return theCanvasWrapper;
@@ -72,9 +72,9 @@ public class CanvasWrapper {
             System.out.println("StudentList Error: " + ex.getMessage());
         }
     }
-    
+
     //use this method to make a file with the JSON from the hardcoded list
-    public void createJson(){
+    public void createJson() {
         String json = gson.toJson(hardcodedList, type);
         try (Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileName), "utf-8"))) {
             writer.write(json);

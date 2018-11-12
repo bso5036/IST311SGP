@@ -16,13 +16,13 @@ import javafx.stage.Stage;
  * @author bso5036
  */
 public class IST311Sprint2 extends Application {
-    
+
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("fxml_login.fxml"));
-        
+
         Scene scene = new Scene(root);
-        
+
         stage.setScene(scene);
         stage.show();
     }
@@ -33,5 +33,5 @@ public class IST311Sprint2 extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }

@@ -30,19 +30,19 @@
     </HBox>
 
     <Text fx:id="actiontarget" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-   <Label text="Smart Grade Predictor" GridPane.columnIndex="1" />
-   <columnConstraints>
-      <ColumnConstraints />
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-   </rowConstraints>
+    <Label text="Smart Grade Predictor" GridPane.columnIndex="1" />
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
     
 </GridPane>

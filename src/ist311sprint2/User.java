@@ -10,24 +10,34 @@ package ist311sprint2;
  * @author bso5036
  */
 public class User {
+
     private String username;
     private String password;
-    
-    public User(String inUsername, String inPassword){
+    private UserProfile userProfile;
+
+    public User(String inUsername, String inPassword) {
         username = inUsername;
         password = inPassword;
     }
-    
+
     @Override
-    public String toString(){
+    public String toString() {
         return "Username: " + username + " Password: " + password;
     }
-    
-    public String getUsername(){
+
+    public String getUsername() {
         return username;
     }
-    
-    public String getPassword(){
+
+    public String getPassword() {
         return password;
+    }
+
+    public void createUserProfile(String newFirstName, String newLastName, String newEmail, String newAccessID) {
+        userProfile = new UserProfile(newFirstName, newLastName, newEmail, newAccessID);
+    }
+
+    public UserProfile getUserProfile() {
+        return userProfile;
     }
 }

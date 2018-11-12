@@ -12,22 +12,24 @@ import java.util.ArrayList;
  * @author bso5036
  */
 public class UserList {
+
     private ArrayList<User> userList;
-    public UserList(){
+
+    public UserList() {
         userList = new ArrayList<>();
         addUsersToList();
     }
-    
-    private void addUsersToList(){
+
+    private void addUsersToList() {
         userList.add(new User("12345678", "12345678"));
         userList.add(new User("password", "password"));
         userList.add(new User("rockyou", "rockyou"));
         userList.add(new User("babygirl", "babygirl"));
         userList.add(new User("qwer", "qwer"));
     }
-    
-    public ArrayList<User> getUserList(){
+
+    public ArrayList<User> getUserList() {
         return userList;
     }
-    
+
 }

@@ -5,11 +5,11 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="266.0" prefWidth="357.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ist311sprint2.accountManagerController">
-   <children>
-      <Button fx:id="manageAccountButton" layoutX="37.0" layoutY="118.0" mnemonicParsing="false" onAction="#handleManageAccountButtonAction" text="Manage Account" />
-      <Button fx:id="logOutButton" layoutX="37.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleLogOutButtonAction" text="Log Out" />
-      <Button fx:id="viewGradesButton" layoutX="37.0" layoutY="165.0" mnemonicParsing="false" onAction="#handleViewGradesButtonAction" text="View Grades" />
-      <Button fx:id="viewScheduleButton" layoutX="37.0" layoutY="72.0" mnemonicParsing="false" onAction="#handleViewScheduleButtonAction" text="View Schedule" />
-      <Text fx:id="outputText" layoutX="170.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="153.6708984375" />
-   </children>
+    <children>
+        <Button fx:id="manageAccountButton" layoutX="37.0" layoutY="118.0" mnemonicParsing="false" onAction="#handleManageAccountButtonAction" text="Manage Account" />
+        <Button fx:id="logOutButton" layoutX="37.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleLogOutButtonAction" text="Log Out" />
+        <Button fx:id="viewGradesButton" layoutX="37.0" layoutY="165.0" mnemonicParsing="false" onAction="#handleViewGradesButtonAction" text="View Grades" />
+        <Button fx:id="viewScheduleButton" layoutX="37.0" layoutY="72.0" mnemonicParsing="false" onAction="#handleViewScheduleButtonAction" text="View Schedule" />
+        <Text fx:id="outputText" layoutX="170.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="153.6708984375" />
+    </children>
 </AnchorPane>

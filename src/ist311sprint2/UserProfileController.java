@@ -33,17 +33,17 @@ public class UserProfileController implements Initializable {
     private Button submitButton;
     @FXML
     private Button backButton;
-    
+
     @FXML
     private void handleSubmitButton(ActionEvent event) throws IOException {
-        
-        UserProfile profile = new UserProfile(firstNameTextField.getText(), lastNameTextField.getText(), emailTextField.getText(), accessIDTextField.getText());
+
+        PersistentDataCntl.getPersistentDataCntl().getLoggedInUser().createUserProfile(firstNameTextField.getText(), lastNameTextField.getText(), emailTextField.getText(), accessIDTextField.getText());
         submitButton.getScene().setRoot(FXMLLoader.load(getClass().getResource("accountManager.fxml")));
     }
-    
+
     @FXML
     private void handleBackButton(ActionEvent event) throws IOException {
-        
+
         backButton.getScene().setRoot(FXMLLoader.load(getClass().getResource("accountManager.fxml")));
     }
 

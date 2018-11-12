@@ -19,7 +19,7 @@ import javafx.scene.text.Text;
  * @author bdb5328
  */
 public class accountManagerController implements Initializable {
-    
+
     //@FXML
     //private Label label;
     @FXML
@@ -32,27 +32,32 @@ public class accountManagerController implements Initializable {
         
         label.setText("Hello World!");
     }
-*/
+     */
     @FXML
-    public void handleLogOutButtonAction(ActionEvent event){
+    public void handleLogOutButtonAction(ActionEvent event) {
         outputText.setText("Logout button pressed");
     }
-    public void handleViewScheduleButtonAction(ActionEvent event){
+
+    public void handleViewScheduleButtonAction(ActionEvent event) {
         outputText.setText("View Schedule button pressed");
     }
-    public void handleManageAccountButtonAction(ActionEvent event) throws IOException{
+
+    public void handleManageAccountButtonAction(ActionEvent event) throws IOException {
         outputText.setText("Manage Account button pressed");
-        
+
         outputText.getScene().setRoot(FXMLLoader.load(getClass().getResource("UserProfile.fxml")));
-        
+
     }
-    public void handleViewGradesButtonAction(ActionEvent event){
+
+    public void handleViewGradesButtonAction(ActionEvent event) throws IOException {
         outputText.setText("View Grades button pressed");
+
+        outputText.getScene().setRoot(FXMLLoader.load(getClass().getResource("CaptureGrades.fxml")));
     }
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+    }
+
 }

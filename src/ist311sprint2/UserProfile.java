@@ -1,10 +1,9 @@
 package ist311sprint2;
 
 import java.util.ArrayList;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import java.util.List;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 /**
  *
@@ -17,7 +16,6 @@ public class UserProfile {
     private String email = new String();
     private String accessID = new String();
     private ArrayList<Course> courses;
-    
 
     public UserProfile(String newFirstName, String newLastName, String newEmail, String newAccessID) {
         firstName = newFirstName;
@@ -53,15 +51,22 @@ public class UserProfile {
     public String getAccessID() {
         return accessID;
     }
-    
-    public ArrayList<Course> getCourses(){
-        if(courses.isEmpty()){
+
+    public ArrayList<Course> getCourses() {
+        if (courses.isEmpty()) {
             CanvasWrapper.getCanvasWrapper().captureGrades(this);
         }
         return courses;
     }
-    
-    public void setCourses(ArrayList<Course> newCourses){
+
+    public ObservableList<Course> getCourseData() {
+        ObservableList<Course> theListOfUsers;
+        List<Course> courseList = (List<Course>) courses;
+        theListOfUsers = FXCollections.observableList(courseList);
+        return theListOfUsers;
+    }
+
+    public void setCourses(ArrayList<Course> newCourses) {
         courses = newCourses;
     }
 
@@ -92,5 +97,5 @@ public class UserProfile {
     public void setAccessID(String accessID) {
         this.accessID = accessID;
     }
-    
+
 }
