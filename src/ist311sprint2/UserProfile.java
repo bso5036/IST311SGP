@@ -93,5 +93,4 @@ public class UserProfile {
         this.accessID = accessID;
     }
     
-    
 }
