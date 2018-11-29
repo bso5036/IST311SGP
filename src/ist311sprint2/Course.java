@@ -5,6 +5,8 @@
  */
 package ist311sprint2;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author bso5036
@@ -14,6 +16,7 @@ public class Course {
     private String name;
     private String instructor;
     private Double grade;
+    private ArrayList<Assignment> assignments;
 
     public Course(String inName, String inInstructor, Double inGrade) {
         name = inName;

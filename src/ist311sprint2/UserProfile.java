@@ -62,7 +62,7 @@ public class UserProfile {
 
     public ObservableList<Course> getCourseData() {
         ObservableList<Course> theListOfUsers;
-        List<Course> courseList = (List<Course>) courses;
+        List<Course> courseList = (List<Course>) courses.getCourseList();
         theListOfUsers = FXCollections.observableList(courseList);
         return theListOfUsers;
     }
