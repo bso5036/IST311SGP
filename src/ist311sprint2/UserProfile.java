@@ -15,13 +15,14 @@ public class UserProfile {
     private String lastName = new String();
     private String email = new String();
     private String accessID = new String();
-    private ArrayList<Course> courses;
+    private CourseList courses;
 
     public UserProfile(String newFirstName, String newLastName, String newEmail, String newAccessID) {
         firstName = newFirstName;
         lastName = newLastName;
         email = newEmail;
         accessID = newAccessID;
+        courses = new CourseList();
     }
 
     /**
@@ -53,10 +54,10 @@ public class UserProfile {
     }
 
     public ArrayList<Course> getCourses() {
-        if (courses.isEmpty()) {
+        if (courses.getCourseList().isEmpty()) {
             CanvasWrapper.getCanvasWrapper().captureGrades(this);
         }
-        return courses;
+        return courses.getCourseList();
     }
 
     public ObservableList<Course> getCourseData() {
@@ -64,10 +65,6 @@ public class UserProfile {
         List<Course> courseList = (List<Course>) courses;
         theListOfUsers = FXCollections.observableList(courseList);
         return theListOfUsers;
-    }
-
-    public void setCourses(ArrayList<Course> newCourses) {
-        courses = newCourses;
     }
 
     /**
@@ -97,5 +94,9 @@ public class UserProfile {
     public void setAccessID(String accessID) {
         this.accessID = accessID;
     }
-
+    
+    public CourseList getCourseList(){
+        return courses;
+    }
+    
 }

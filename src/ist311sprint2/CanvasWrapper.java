@@ -65,7 +65,7 @@ public class CanvasWrapper {
             while (in.hasNextLine()) {
                 nextLine = in.nextLine();
                 ArrayList<Course> fromJson = gson.fromJson(nextLine, type);
-                userProfile.setCourses(fromJson);
+                userProfile.getCourseList().setCourses(fromJson);
             }
         } catch (FileNotFoundException ex) {
             System.out.println("StudentList Error: " + ex.getMessage());
