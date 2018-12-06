@@ -7,15 +7,18 @@ package ist311sprint2;
 
 import java.util.ArrayList;
 
-/** 
+/**
  *
  * @author smg6192
  */
 public class CourseList {
+
     private ArrayList<Course> courseList;
-    public CourseList(){
+
+    public CourseList() {
         courseList = new ArrayList<>();
     }
+
     public void setCourses(ArrayList<Course> newCourses) {
         courseList = newCourses;
     }
@@ -23,6 +26,5 @@ public class CourseList {
     public ArrayList<Course> getCourseList() {
         return courseList;
     }
-    
-    
+
 }

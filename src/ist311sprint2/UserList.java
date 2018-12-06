@@ -32,4 +32,8 @@ public class UserList {
         return userList;
     }
 
+    public void setUserList(ArrayList<User> newUsers) {
+        userList = newUsers;
+    }
+
 }

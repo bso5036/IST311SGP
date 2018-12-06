@@ -94,9 +94,9 @@ public class UserProfile {
     public void setAccessID(String accessID) {
         this.accessID = accessID;
     }
-    
-    public CourseList getCourseList(){
+
+    public CourseList getCourseList() {
         return courses;
     }
-    
+
 }

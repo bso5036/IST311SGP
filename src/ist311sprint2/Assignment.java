@@ -10,16 +10,17 @@ package ist311sprint2;
  * @author bso5036
  */
 public class Assignment {
+
     private String name;
     private Boolean graded;
     private Double grade;
-    
-    public Assignment(String inName){
+
+    public Assignment(String inName) {
         name = inName;
         graded = false;
     }
-    
-    public Assignment(String inName, Double inGrade){
+
+    public Assignment(String inName, Double inGrade) {
         name = inName;
         grade = inGrade;
         graded = true;
