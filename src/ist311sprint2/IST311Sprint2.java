@@ -20,7 +20,7 @@ public class IST311Sprint2 extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("fxml_login.fxml"));
-
+        PersistentDataCntl.getPersistentDataCntl().getSavedUserList();
         Scene scene = new Scene(root);
 
         stage.setScene(scene);

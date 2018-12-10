@@ -17,7 +17,7 @@ public class UserList {
 
     public UserList() {
         userList = new ArrayList<>();
-        addUsersToList();
+        //addUsersToList();
     }
 
     private void addUsersToList() {

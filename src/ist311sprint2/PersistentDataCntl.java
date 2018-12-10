@@ -51,9 +51,9 @@ public class PersistentDataCntl {
     public void setLoggedInUser(User userLoggingIn) {
         loggedInUser = userLoggingIn;
     }
-    
-    private void makeUserList(){
-        if(userList == null){
+
+    private void makeUserList() {
+        if (userList == null) {
             userList = new UserList();
             //getSavedUserList();
         }
@@ -63,7 +63,7 @@ public class PersistentDataCntl {
         return loggedInUser;
     }
 
-    private void getSavedUserList() {
+    public void getSavedUserList() {
         final File inputFile = new File(fileName);
         String nextLine;
         try (Scanner in = new Scanner(inputFile)) {

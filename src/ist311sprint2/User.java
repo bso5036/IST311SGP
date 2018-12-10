@@ -18,7 +18,7 @@ public class User {
     public User(String inUsername, String inPassword) {
         username = inUsername;
         password = inPassword;
-        userProfile = new UserProfile("","","","");
+        userProfile = new UserProfile("", "", "", "");
     }
 
     @Override
