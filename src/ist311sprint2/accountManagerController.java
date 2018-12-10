@@ -34,7 +34,10 @@ public class accountManagerController implements Initializable {
     }
      */
     @FXML
-    public void handleLogOutButtonAction(ActionEvent event) {
+    public void handleLogOutButtonAction(ActionEvent event) throws IOException {
+        PersistentDataCntl.getPersistentDataCntl().saveUserList();
+        PersistentDataCntl.getPersistentDataCntl().setLoggedInUser(null);
+        outputText.getScene().setRoot(FXMLLoader.load(getClass().getResource("fxml_login.fxml")));
         outputText.setText("Logout button pressed");
     }
 

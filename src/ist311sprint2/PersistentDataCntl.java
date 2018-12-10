@@ -26,18 +26,19 @@ import java.util.Scanner;
 public class PersistentDataCntl {
 
     private static PersistentDataCntl thePersistentDataCntl;
-    private UserList userList;
+    private static UserList userList;
     private User loggedInUser;
     private final String fileName;
     private final Gson gson;
     private final Type type;
 
     private PersistentDataCntl() {
-        userList = new UserList();
         gson = new Gson();
-        type = new TypeToken<ArrayList<Course>>() {
+        type = new TypeToken<ArrayList<User>>() {
         }.getType();
         fileName = "UserList.txt";
+        makeUserList();
+        //saveUserList();
     }
 
     public static PersistentDataCntl getPersistentDataCntl() {
@@ -49,6 +50,13 @@ public class PersistentDataCntl {
 
     public void setLoggedInUser(User userLoggingIn) {
         loggedInUser = userLoggingIn;
+    }
+    
+    private void makeUserList(){
+        if(userList == null){
+            userList = new UserList();
+            //getSavedUserList();
+        }
     }
 
     public User getLoggedInUser() {
@@ -69,8 +77,8 @@ public class PersistentDataCntl {
         }
     }
 
-    private void saveUserList() {
-        String json = gson.toJson(userList, type);
+    public final void saveUserList() {
+        String json = gson.toJson(userList.getUserList(), type);
         try (Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileName), "utf-8"))) {
             writer.write(json);
         } catch (FileNotFoundException ex) {

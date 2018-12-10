@@ -38,6 +38,7 @@ public class UserProfileController implements Initializable {
     private void handleSubmitButton(ActionEvent event) throws IOException {
 
         PersistentDataCntl.getPersistentDataCntl().getLoggedInUser().createUserProfile(firstNameTextField.getText(), lastNameTextField.getText(), emailTextField.getText(), accessIDTextField.getText());
+        PersistentDataCntl.getPersistentDataCntl().saveUserList();
         submitButton.getScene().setRoot(FXMLLoader.load(getClass().getResource("accountManager.fxml")));
     }
 

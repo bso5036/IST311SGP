@@ -18,6 +18,7 @@ public class User {
     public User(String inUsername, String inPassword) {
         username = inUsername;
         password = inPassword;
+        userProfile = new UserProfile("","","","");
     }
 
     @Override
@@ -34,7 +35,11 @@ public class User {
     }
 
     public void createUserProfile(String newFirstName, String newLastName, String newEmail, String newAccessID) {
-        userProfile = new UserProfile(newFirstName, newLastName, newEmail, newAccessID);
+        //userProfile = new UserProfile(newFirstName, newLastName, newEmail, newAccessID);
+        userProfile.setFirstName(newFirstName);
+        userProfile.setLastName(newLastName);
+        userProfile.setEmail(newEmail);
+        userProfile.setAccessID(newAccessID);
     }
 
     public UserProfile getUserProfile() {

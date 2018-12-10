@@ -53,7 +53,7 @@ public class FXMLLoginController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        userList = new UserList();
+        userList = PersistentDataCntl.getPersistentDataCntl().getUserList();
     }
 
 }
