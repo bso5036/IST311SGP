@@ -26,7 +26,7 @@ import java.util.Scanner;
 public class CanvasWrapper {
 
     private static CanvasWrapper theCanvasWrapper;
-    private ArrayList<Course> courseList;
+    private ArrayList<Assignment> assignmentList;
     private ArrayList<Course> hardcodedList;
     private final String fileName;
     private final Gson gson;
@@ -38,10 +38,11 @@ public class CanvasWrapper {
         }.getType();
         fileName = "CanvasGrades.txt";
         hardcodedList();
+        setAssignments();
     }
 
     private void hardcodedList() {
-        hardcodedList = new ArrayList();
+        hardcodedList = new ArrayList<>();
         hardcodedList.add(new Course("IST 311", "Steven Haynes", 95.34));
         hardcodedList.add(new Course("IST 242", "Fred Fonseca", 86.63));
         hardcodedList.add(new Course("IST 420", "David Fusco", 87.36));
@@ -66,6 +67,7 @@ public class CanvasWrapper {
                 nextLine = in.nextLine();
                 ArrayList<Course> fromJson = gson.fromJson(nextLine, type);
                 userProfile.getCourseList().setCourses(fromJson);
+                addAssignments(userProfile);
                 PersistentDataCntl.getPersistentDataCntl().saveUserList();
             }
         } catch (FileNotFoundException ex) {
@@ -84,6 +86,21 @@ public class CanvasWrapper {
             System.out.println("Error: " + ex.getMessage());
         } catch (IOException ex) {
             System.out.println("Error: " + ex.getMessage());
+        }
+    }
+    
+    private void setAssignments(){
+        assignmentList = new ArrayList<>();
+        assignmentList.add(new Assignment("Assignment1", 97.0));
+        assignmentList.add(new Assignment("Assignment2", 87.2));
+        assignmentList.add(new Assignment("Assignment3", 84.3));
+        assignmentList.add(new Assignment("Assignment4", 92.3));
+        assignmentList.add(new Assignment("Assignment5", 90.7));
+    }
+    
+    private void addAssignments(UserProfile userProfile){
+        for(Course course : userProfile.getCourses()){
+            course.setAssignments(assignmentList);
         }
     }
 }

@@ -35,4 +35,8 @@ public class Course {
     public String getInstructor() {
         return instructor;
     }
+    
+    public void setAssignments(ArrayList newAssignments){
+        assignments = newAssignments;
+    }
 }
