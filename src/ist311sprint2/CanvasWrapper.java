@@ -91,11 +91,16 @@ public class CanvasWrapper {
     
     private void setAssignments(){
         assignmentList = new ArrayList<>();
-        assignmentList.add(new Assignment("Assignment1", 97.0));
-        assignmentList.add(new Assignment("Assignment2", 87.2));
-        assignmentList.add(new Assignment("Assignment3", 84.3));
-        assignmentList.add(new Assignment("Assignment4", 92.3));
-        assignmentList.add(new Assignment("Assignment5", 90.7));
+        assignmentList.add(new Assignment("Assignment1", 100.0, 97.0));
+        assignmentList.add(new Assignment("Assignment2", 100.0, 87.0));
+        assignmentList.add(new Assignment("Assignment3", 100.0, 84.0));
+        assignmentList.add(new Assignment("Assignment4", 100.0, 92.0));
+        assignmentList.add(new Assignment("Assignment5", 100.0, 90.0));
+        assignmentList.add(new Assignment("Assignment6", 100.0, 94.0));
+        assignmentList.add(new Assignment("Assignment7", 100.0, 83.0));
+        assignmentList.add(new Assignment("Assignment8", 100.0));
+        assignmentList.add(new Assignment("Assignment9", 100.0));
+        assignmentList.add(new Assignment("Assignment10", 100.0));
     }
     
     private void addAssignments(UserProfile userProfile){

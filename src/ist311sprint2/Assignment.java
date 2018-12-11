@@ -14,15 +14,46 @@ public class Assignment {
     private String name;
     private Boolean graded;
     private Double grade;
+    private Double maxGrade;
 
-    public Assignment(String inName) {
+    public Assignment(String inName, Double inMaxGrade) {
         name = inName;
+        maxGrade = inMaxGrade;
         graded = false;
     }
 
-    public Assignment(String inName, Double inGrade) {
+    public Assignment(String inName, Double inMaxGrade, Double inGrade) {
         name = inName;
+        maxGrade = inMaxGrade;
         grade = inGrade;
         graded = true;
+    }
+
+    /**
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * @return the graded
+     */
+    public Boolean getGraded() {
+        return graded;
+    }
+
+    /**
+     * @return the grade
+     */
+    public Double getGrade() {
+        return grade;
+    }
+
+    /**
+     * @return the maxGrade
+     */
+    public Double getMaxGrade() {
+        return maxGrade;
     }
 }

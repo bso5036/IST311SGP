@@ -41,7 +41,8 @@ public class accountManagerController implements Initializable {
         outputText.setText("Logout button pressed");
     }
 
-    public void handleViewScheduleButtonAction(ActionEvent event) {
+    public void handleViewScheduleButtonAction(ActionEvent event) throws IOException {
+        outputText.getScene().setRoot(FXMLLoader.load(getClass().getResource("GradePredictor.fxml")));
         outputText.setText("View Schedule button pressed");
     }
 

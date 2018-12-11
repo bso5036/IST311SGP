@@ -39,4 +39,8 @@ public class Course {
     public void setAssignments(ArrayList newAssignments){
         assignments = newAssignments;
     }
+    
+    public ArrayList<Assignment> getAssignments(){
+        return assignments;
+    }
 }
